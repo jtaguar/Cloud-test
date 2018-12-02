@@ -2,11 +2,10 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var DataStore = require("nedb");
 var cors = require('cors');
-var path = require('path') 
+var path = require('path');
+
 const CONTACTS_APP_DIR = "/dist/contacts-app"; 
-
-
- var PORT = 3000;
+ var PORT = (process.env.PORT || 3000);
  // Variable que configura la primera parte de nuestra dirección URL
  var BASE_API_PATH = "/api/v1";
  // contacts.json será el fichero local que hará de "BBDD"
